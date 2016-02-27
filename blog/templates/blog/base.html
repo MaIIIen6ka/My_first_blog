@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Masha's blog</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">История о том как я попала на DjangoGirls</a></h1>
+        </div>
+        <h1>DjangoGirls проодили в г. Харьков. Об этом в следующих публикациях:</h1>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
